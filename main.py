@@ -4,8 +4,8 @@ from openmeteopy.hourly import HourlyHistorical
 from openmeteopy.options import HistoricalOptions
 
 # Latitude, Longitude
-longitude = 33.89
-latitude = -6.31
+longitude = 51.4475302
+latitude = 35.737952
 
 hourly = HourlyHistorical()
 daily = DailyHistorical()
