@@ -21,4 +21,5 @@ mgr = OpenMeteo(options, None, daily.all())
 
 # Download data
 meteo = mgr.get_pandas()
+print(meteo.columns)
 print(meteo)
