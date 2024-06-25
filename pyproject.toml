@@ -7,6 +7,7 @@ authors = [
 ]
 dependencies = [
     "openmeteopy @ git+https://github.com/m0rp43us/openmeteopy@main",
+    "geopandas>=1.0.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

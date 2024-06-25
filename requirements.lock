@@ -14,6 +14,8 @@ alabaster==0.7.16
 babel==2.15.0
     # via sphinx
 certifi==2024.6.2
+    # via pyogrio
+    # via pyproj
     # via requests
 charset-normalizer==3.3.2
     # via requests
@@ -21,6 +23,8 @@ docutils==0.20.1
     # via readme-renderer
     # via sphinx
     # via sphinx-rtd-theme
+geopandas==1.0.0
+    # via weathergirl
 idna==3.7
     # via requests
 imagesize==1.4.1
@@ -51,14 +55,20 @@ more-itertools==10.3.0
 nh3==0.2.17
     # via readme-renderer
 numpy==2.0.0
+    # via geopandas
     # via pandas
     # via pyarrow
+    # via pyogrio
+    # via shapely
 openmeteopy @ git+https://github.com/m0rp43us/openmeteopy@83971b993df873cabf1f90f17f782a267a724e07
     # via weathergirl
 packaging==24.1
+    # via geopandas
+    # via pyogrio
     # via pytest
     # via sphinx
 pandas==2.2.2
+    # via geopandas
     # via openmeteopy
 pkginfo==1.11.1
     # via twine
@@ -70,6 +80,10 @@ pygments==2.18.0
     # via readme-renderer
     # via rich
     # via sphinx
+pyogrio==0.9.0
+    # via geopandas
+pyproj==3.6.1
+    # via geopandas
 pytest==8.2.2
     # via openmeteopy
 python-dateutil==2.9.0.post0
@@ -91,6 +105,8 @@ rich==13.7.1
     # via twine
 setuptools==70.1.0
     # via openmeteopy
+shapely==2.0.4
+    # via geopandas
 six==1.16.0
     # via python-dateutil
 snowballstemmer==2.2.0
