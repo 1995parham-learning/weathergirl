@@ -1,10 +1,13 @@
 import datetime
+import logging
 import pathlib
 
 import geopandas as gpd
 from openmeteopy import OpenMeteo
 from openmeteopy.hourly import HourlyHistorical
 from openmeteopy.options import HistoricalOptions
+
+logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     districts: gpd.GeoDataFrame = gpd.read_file("districts.geojson")
@@ -13,10 +16,10 @@ if __name__ == "__main__":
     to = datetime.date(2024, 5, 18)
 
     for _, district in districts.iterrows():
-        print(f"Reading weather data for {district.name}")
+        logger.info("Reading weather data for %s", district.name)
 
         if pathlib.Path(f"{district.id}.csv").exists:
-            print(f"Weather data for {district.name} is already downloaded")
+            logger.info("Weather data for %d is already downloaded", district.name)
             continue
 
         center = district.geometry.centroid

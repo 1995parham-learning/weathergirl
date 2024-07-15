@@ -15,3 +15,4 @@ jobs:
         with:
           version: 'latest'
       - run: rye sync
+      - run: ruff check
