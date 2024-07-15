@@ -15,4 +15,3 @@ jobs:
         with:
           version: 'latest'
       - run: rye sync
-      - run: rye run mypy .

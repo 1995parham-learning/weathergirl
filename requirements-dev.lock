@@ -52,9 +52,6 @@ mdurl==0.1.2
 more-itertools==10.3.0
     # via jaraco-classes
     # via jaraco-functools
-mypy==1.10.1
-mypy-extensions==1.0.0
-    # via mypy
 nh3==0.2.17
     # via readme-renderer
 numpy==2.0.0
@@ -106,6 +103,7 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.1
     # via twine
+ruff==0.5.2
 setuptools==70.1.1
     # via openmeteopy
 shapely==2.0.4
@@ -136,8 +134,6 @@ sphinxcontrib-serializinghtml==1.1.10
     # via sphinx
 twine==5.0.0
     # via openmeteopy
-typing-extensions==4.12.2
-    # via mypy
 tzdata==2024.1
     # via pandas
 urllib3==2.2.2
