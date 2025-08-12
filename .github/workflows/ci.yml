@@ -11,6 +11,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           activate-environment: true
+      - run: uv sync --all-groups -v
       - run: ty check
       - run: ruff check
       - run: ruff format --check
