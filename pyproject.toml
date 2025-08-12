@@ -2,45 +2,33 @@
 name = "weathergirl"
 version = "0.1.0"
 description = "Add your description here"
-authors = [
-    { name = "Parham Alvani", email = "parham.alvani@gmail.com" }
-]
+authors = [{ name = "Parham Alvani", email = "parham.alvani@gmail.com" }]
 dependencies = [
-    "openmeteopy @ git+https://github.com/m0rp43us/openmeteopy@main",
-    "geopandas>=1.0.0",
+  "openmeteopy @ git+https://github.com/m0rp43us/openmeteopy@main",
+  "geopandas>=1.0.0",
 ]
 readme = "README.md"
-requires-python = ">= 3.8"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.rye]
-managed = true
-dev-dependencies = [
-    "ruff>=0.5.2",
-]
-
-[tool.hatch.metadata]
-allow-direct-references = true
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/weathergirl"]
+requires-python = ">= 3.13"
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py313"
 
 [tool.ruff.lint]
 ignore = [
-  "D1", # We don't write docstrings for everything
-  "D203", # Clashes with pep257
-  "D212", # Clashes with D213
-  "EM101", # Uglier stacktrace is better than uglier code
+  "D1",     # We don't write docstrings for everything
+  "D203",   # Clashes with pep257
+  "D212",   # Clashes with D213
+  "EM101",  # Uglier stacktrace is better than uglier code
   "CPY001", # We don't use copy
   "COM812", # Clashes with formatter
   "ISC001", # We use "" "" to breakup lines
-  "S101", # We don't run python with -O
-  "PT", # We don't use pytest
+  "S101",   # We don't run python with -O
+  "PT",     # We don't use pytest
 ]
 select = ["ALL"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.8",
+    "ty>=0.0.1a17",
+]
